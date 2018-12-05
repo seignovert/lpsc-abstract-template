@@ -1,5 +1,9 @@
 # LPSC LaTeX Abstract Template
 
+[![GitHub release](https://img.shields.io/github/release/seignovert/lpsc-abstract-template.svg)](https://github.com/seignovert/lpsc-abstract-template/releases/latest)
+[![GitHub license](https://img.shields.io/badge/license-CC--BY--NC--SA-green.svg)](https://github.com/seignovert/lpsc-abstract-template/blob/master/LICENCE.md)
+
+
 This is a LaTeX template for LPSC and other LPI meetings.
 This directory contains an example files.
 The template file uses several pacakages, but most LaTeX distributions should have these packages already.
