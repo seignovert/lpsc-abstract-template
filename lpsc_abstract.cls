@@ -69,7 +69,7 @@
 
 % Edit maketitle command
 \def\@maketitle{%
-    {\bfseries\@title. }%
+    {\bfseries\MakeUppercase\@title. }%
     {\AB@authlist, \AB@affillist.}%
     \vskip .3in
 }
