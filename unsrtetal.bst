@@ -1006,32 +1006,11 @@ FUNCTION {incollection}
 FUNCTION {inproceedings}
 { output.bibitem
   format.authors "author" output.check
+  format.date "year" output.check
+  booktitle "booktitle" bibinfo.check
+  emphasize "booktitle" output.check
   new.block
-  format.title "title" output.check
-  new.block
-  crossref missing$
-    { format.in.ed.booktitle "booktitle" output.check
-      format.bvolume output
-      format.number.series output
-      format.pages output
-      new.sentence
-      publisher empty$
-        { format.organization.address output }
-        { organization "organization" bibinfo.check output
-          format.publisher.address output
-        }
-      if$
-      format.date "year" output.check
-      format.isbn output
-      format.issn output
-    }
-    { format.incoll.inproc.crossref output.nonnull
-      format.pages output
-    }
-  if$
-  format.doi output
-  new.block
-  format.note output
+  format.vol.num.pages output
   fin.entry
 }
 FUNCTION {conference} { inproceedings }
