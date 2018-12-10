@@ -980,27 +980,11 @@ FUNCTION {inbook}
 FUNCTION {incollection}
 { output.bibitem
   format.authors "author" output.check
+  format.date "year" output.check
+  booktitle "booktitle" bibinfo.check
+  emphasize "booktitle" output.check
   new.block
-  format.title "title" output.check
-  new.block
-  crossref missing$
-    { format.in.ed.booktitle "booktitle" output.check
-      format.bvolume output
-      format.number.series output
-      format.chapter.pages output
-      new.sentence
-      format.publisher.address output
-      format.edition output
-      format.date "year" output.check
-      format.isbn output
-    }
-    { format.incoll.inproc.crossref output.nonnull
-      format.chapter.pages output
-    }
-  if$
-  format.doi output
-  new.block
-  format.note output
+  format.vol.num.pages output
   fin.entry
 }
 FUNCTION {inproceedings}
