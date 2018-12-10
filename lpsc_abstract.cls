@@ -58,6 +58,7 @@
 \titleformat{\subparagraph}[runin]{\normalfont\normalsize\itshape}{\thesubparagraph}{1em}{}
 \titlespacing{\subparagraph}{.25in}{2pt}{.5em}
 
+\sisetup{group-separator = {,}}
 
 %%---------------------------- Commands ----------------
 %%
