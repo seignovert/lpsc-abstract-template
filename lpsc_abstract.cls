@@ -34,7 +34,7 @@
 
 \RequirePackage{times}
 \RequirePackage[margin=1in]{geometry}	 % Sets margins cleanly
-\RequirePackage[small,compact]{titlesec} % To compress the section titles even more, use the 
+\RequirePackage[small,compact]{titlesec} % To compress the section titles even more, use the
 \RequirePackage{paralist}			     % For compressing bibliography into a paragraph
 \RequirePackage{balance}			     % For balancing columns on the page.
 \RequirePackage[
@@ -45,7 +45,7 @@
     linkcolor=black
 ]{hyperref} % Puts actual hyperlinks in your PDF, optional.
 
-\RequirePackage[numbers]{natbib}
+\RequirePackage[numbers,sort&compress]{natbib}
 
 %%---------------------------- Global Settings ------------------------
 
