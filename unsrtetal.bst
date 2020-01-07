@@ -7,7 +7,7 @@
 %% merlin.mbs  (with options: `seq-no,ed-au,nmlm,x2,m1,xmth,num-xser,isbn,issn,doi,xedn,nfss,')
 %% ----------------------------------------
 %% *** Meant to function like unsrt, but with suppressing long author lists. ***
-%% 
+%%
 %% Copyright 1994-2005 Patrick W Daly
  % ===============================================================
  % IMPORTANT NOTICE:
@@ -730,9 +730,9 @@ FUNCTION {format.in.ed.booktitle}
   if$
 }
 FUNCTION {empty.misc.check}
-{ author empty$ title empty$ howpublished empty$
+{ author empty$ title empty$ howpublished empty$ publisher empty$
   month empty$ year empty$ note empty$
-  and and and and and
+  and and and and and and
     { "all relevant fields are empty in " cite$ * warning$ }
     'skip$
   if$
@@ -869,7 +869,7 @@ FUNCTION {format.org.or.pub}
   if$
 }
 FUNCTION {format.publisher.address}
-{ publisher "publisher" bibinfo.warn format.org.or.pub
+{ publisher "publisher" bibinfo.warn format.org.or.pub emphasize
 }
 
 FUNCTION {format.organization.address}
@@ -993,7 +993,6 @@ FUNCTION {inproceedings}
   format.date "year" output.check
   booktitle "booktitle" bibinfo.check
   emphasize "booktitle" output.check
-  new.block
   format.vol.num.pages output
   fin.entry
 }
@@ -1060,6 +1059,9 @@ FUNCTION {misc}
   howpublished new.block.checka
   howpublished "howpublished" bibinfo.check output
   format.date output
+  new.block
+  format.publisher.address output
+  new.block
   format.doi output
   new.block
   format.note output
