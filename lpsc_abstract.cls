@@ -46,6 +46,7 @@
 ]{hyperref} % Puts actual hyperlinks in your PDF, optional.
 
 \RequirePackage[numbers,sort&compress]{natbib}
+\RequirePackage{caption}
 
 %%---------------------------- Global Settings ------------------------
 
@@ -59,6 +60,9 @@
 \titlespacing{\subparagraph}{.25in}{2pt}{.5em}
 
 \sisetup{group-separator = {,}}
+
+%% Caption setup
+\captionsetup[figure]{labelsep=period}
 
 %%---------------------------- Commands ----------------
 %%
