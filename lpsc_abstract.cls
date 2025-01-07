@@ -83,6 +83,18 @@
     \twocolumn[\@maketitle]
 }
 
+%% Adjust spacing around figures and captions
+\newcommand{\compactfigures}{
+    % \setlength{\floatsep}{0pt plus 2pt minus 2pt}
+    % \setlength{\textfloatsep}{0pt plus 2pt minus 4pt}
+    % \setlength{\intextsep}{0pt plus 2pt minus 2pt}
+    % \setlength{\abovecaptionskip}{0pt}
+    \setlength{\floatsep}{0.5\baselineskip plus 0.15\baselineskip minus 0.15\baselineskip}
+    \setlength{\textfloatsep}{0.5\baselineskip plus 0.15\baselineskip minus 0.15\baselineskip}
+    \setlength{\intextsep}{0.5\baselineskip plus 0.15\baselineskip minus 0.15\baselineskip}
+    \setlength{\abovecaptionskip}{0.25\baselineskip}
+}
+
 % Put the bibliography inline
 \bibliographystyle{unsrtetal}
 
