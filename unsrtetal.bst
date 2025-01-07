@@ -9,6 +9,7 @@
 %% *** Meant to function like unsrt, but with suppressing long author lists. ***
 %%
 %% Copyright 1994-2005 Patrick W Daly
+%% Copyright 2024 Bojun Jia
  % ===============================================================
  % IMPORTANT NOTICE:
  % This bibliographic style (bst) file has been generated from one or
