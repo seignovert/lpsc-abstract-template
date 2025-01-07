@@ -5,6 +5,7 @@
 
 % Copyright (C) 2005,2007,2008 Ross A. Beyer
 % Copyright (C) 2018 Benoit Seignovert
+% Copyright (C) 2024 Bojun Jia
 
 % This work is licensed under the Creative Commons
 % Attribution-Noncommercial-Share Alike 4.0 License. To view a copy
@@ -46,6 +47,7 @@
 ]{hyperref} % Puts actual hyperlinks in your PDF, optional.
 
 \RequirePackage[numbers,sort&compress]{natbib}
+\RequirePackage{caption}
 
 %%---------------------------- Global Settings ------------------------
 
@@ -59,6 +61,9 @@
 \titlespacing{\subparagraph}{.25in}{2pt}{.5em}
 
 \sisetup{group-separator = {,}}
+
+%% Caption setup
+\captionsetup[figure]{labelsep=period}
 
 %%---------------------------- Commands ----------------
 %%
@@ -77,6 +82,18 @@
 \renewcommand\maketitle{
     \thispagestyle{empty}
     \twocolumn[\@maketitle]
+}
+
+%% Adjust spacing around figures and captions
+\newcommand{\compactfigures}{
+    % \setlength{\floatsep}{0pt plus 2pt minus 2pt}
+    % \setlength{\textfloatsep}{0pt plus 2pt minus 4pt}
+    % \setlength{\intextsep}{0pt plus 2pt minus 2pt}
+    % \setlength{\abovecaptionskip}{0pt}
+    \setlength{\floatsep}{0.5\baselineskip plus 0.15\baselineskip minus 0.15\baselineskip}
+    \setlength{\textfloatsep}{0.5\baselineskip plus 0.15\baselineskip minus 0.15\baselineskip}
+    \setlength{\intextsep}{0.5\baselineskip plus 0.15\baselineskip minus 0.15\baselineskip}
+    \setlength{\abovecaptionskip}{0.25\baselineskip}
 }
 
 % Put the bibliography inline

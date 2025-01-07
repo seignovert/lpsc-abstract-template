@@ -4,6 +4,7 @@
 % Copyright (C) 2005,2007 Ross A. Beyer
 % Copyright (C) 2008 Ross A. Beyer and Moses P. Milazzo
 % Copyright (C) 2018 Benoit Seignovert
+% Copyright (C) 2024 Bojun Jia
 
 % This work is licensed under the Creative Commons
 % Attribution-Noncommercial-Share Alike 4.0 License. To view a copy
@@ -66,14 +67,16 @@ or -2188 (or send an e-mail message to \href{mailto:publish@hou.usra.edu}{publis
 
 \paragraph{Please DO NOT Submit Duplicates of Your Abstract;} should you find it necessary to replace or repair your abstract PRIOR TO the submission dead-line, return to the \href{https://www.hou.usra.edu/meeting_portal/abstract_submission/}{abstract submission portion} of the meeting portal and click on the “Update” link that ap-pears next to the title of the abstract you submitted.
  
-% \paragraph{Figures:}
-% Uncomment this paragraph to enable figure input
+\paragraph{Figures:}
+Use \textbackslash{compactfigures} to narrow the picture spacing, and use it in the figure environment to take effect on a single figure.
 
-% \begin{figure}[!ht]
-%     \label{color_scales}
-%     \centering
-%     \includegraphics[width=\columnwidth]{figure.png}
-%     \caption{This is a figure caption.}
-% \end{figure}
+\compactfigures
+
+\begin{figure}[!ht]
+    \label{color_scales}
+    \centering
+    \includegraphics[width=\columnwidth]{figure.png}
+    \caption{This is a figure caption.}
+\end{figure}
 
 \end{document}

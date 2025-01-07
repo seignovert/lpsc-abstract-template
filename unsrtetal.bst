@@ -9,6 +9,7 @@
 %% *** Meant to function like unsrt, but with suppressing long author lists. ***
 %%
 %% Copyright 1994-2005 Patrick W Daly
+%% Copyright 2024 Bojun Jia
  % ===============================================================
  % IMPORTANT NOTICE:
  % This bibliographic style (bst) file has been generated from one or
@@ -643,7 +644,7 @@ FUNCTION {format.journal.pages}
     { swap$ duplicate$ empty$
         { pop$ pop$ format.pages }
         {
-          ":" *
+          ", " *
           swap$
           n.dashify
           "pages" bibinfo.check
@@ -670,18 +671,9 @@ FUNCTION {format.vol.num.pages}
   duplicate$ empty$ 'skip$
     {
       "volume" bibinfo.check
+      emphasize
     }
   if$
-  number "number" bibinfo.check duplicate$ empty$ 'skip$
-    {
-      swap$ duplicate$ empty$
-        { "there's a number but no volume in " cite$ * warning$ }
-        'skip$
-      if$
-      swap$
-      "(" swap$ * ")" *
-    }
-  if$ *
   eid empty$
     { format.journal.pages }
     { format.journal.eid }
